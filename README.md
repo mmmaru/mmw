@@ -1,7 +1,11 @@
 # MMW
 mtls manager web  
 
-🎉本项目完全由cursor生成🎉  
+🎉本项目`main.py`99%由cursor生成🎉  
+
+## 安全性声明
+访客端网页在前端生成RSA私钥和csr后, 由后端签名, 后端返回签名后的crt, 前端将crt和私钥打包成p12进行下载. 安装这个p12仅安装客户端认证证书, 不涉及信任CA, 就算真的成为你的中间人也无法解密你的https  
+本项目开源在 https://github.com/mmmaru/mmw  
 
 ## 部署
 ```sh

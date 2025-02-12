@@ -275,6 +275,10 @@ visit_html = """
         <label>P12密码 (6位):</label><br>
         <input type="password" id="password" pattern=".{6,6}" required>
     </div>
+    <div>
+    <p>本网页在前端生成RSA私钥和csr后, 由后端签名, 后端返回签名后的crt, 前端将crt和私钥打包成p12进行下载. 安装这个p12仅安装客户端认证证书, 不涉及信任CA, 就算真的成为你的中间人也无法解密你的https</p> 
+    <p>本项目开源在 <a href="https://github.com/mmmaru/mmw">https://github.com/mmmaru/mmw</a></p>
+    </div>
     <button onclick="generateCert()">生成证书</button>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/0.10.0/forge.min.js"></script>
